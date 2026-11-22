@@ -1,0 +1,16 @@
+[project]
+name = "closer-look"
+version = "0.1.0"
+description = "AI-assisted document extraction with confidence-based human review"
+readme = "README.md"
+requires-python = ">=3.15"
+dependencies = []
+
+[dependency-groups]
+dev = ["ruff", "ty"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

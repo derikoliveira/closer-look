@@ -19,6 +19,17 @@ Only public data:
 
 The focus is on digital PDFs, as they usually arrive at a company, not scans or photos.
 
+## Setup
+
+Requires [uv](https://docs.astral.sh/uv/getting-started/installation/), and Docker (with the NVIDIA Container Toolkit to use a GPU).
+
+```sh
+uv sync
+uv run scripts/download_invoices.py --year 2026 --limit 50
+docker compose up -d
+docker compose exec ollama ollama pull qwen2.5:7b
+```
+
 ## References
 
 - [Beyond Accuracy: model confidence in KIE with conformal prediction](https://doi.org/10.1007/s10032-026-00572-y)
